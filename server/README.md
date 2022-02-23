@@ -1,7 +1,7 @@
 ### Install requirements
 
 
-If you have not a virtual environment, create one:
+If you don't have a virtual environment, create one:
 `python -m venv .`
 
 
