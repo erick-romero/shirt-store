@@ -1,0 +1,144 @@
+ion-col.driversCards {
+  --ion-grid-columns: 60;
+}
+
+ion-item {
+  --padding-end:1px;
+  --padding-start: 1px;
+  --inner-padding-end:1px;
+  --inner-padding-start:4px;
+  --min-height:36px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
+}
+
+.lowBalance {
+  background-color: red;
+  color: white;
+}
+
+.leewaySection {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #c0bfbf;
+  margin-bottom: 10px;
+}
+
+.leewaySection   .header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 5px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #c0bfbf;
+}
+
+.leewaySection   .header   ion-icon {
+  font-size: 1.6em;
+  justify-self: flex-end;
+  align-self: flex-start;
+}
+
+.leewaySection   .header   ion-title {
+  justify-self: flex-start;
+}
+
+.leewaySection   ion-button {
+  margin-bottom: 15px;
+}
+
+.leewaySection   ion-input {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.leewaySection   ion-title {
+  align-self: flex-start;
+  width: 100%;
+}
+
+.snoozeSection {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.snoozeSection   ion-title {
+  align-self: flex-start;
+}
+
+.snoozeSection   .radioButtonHolder {
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+.snoozeSection   .radioButtonHolder   .radioButtonRow {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.snoozeSection   .radioButtonHolder   .radioButtonRow   ion-item {
+  text-align: center;
+}
+
+.snoozeSection   .radioButtonHolder   .radioButtonRow   ion-radio {
+  margin: 5px;
+}
+
+.snoozeSection   .radioButtonHolder   .radioButtonRow   ion-item {
+  width: 50%;
+}
+
+.secSegment.md {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.secSegment.md   ion-segment-button {
+  min-height: 19px;
+}
+
+.secSegment.md   ion-segment-button   ion-label {
+  line-height: 12px;
+  font-size: 0.9em;
+}
+
+.iconBadge {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  right: -8px;
+  width: 17px;
+  border-radius: 100%;
+  border: 3px solid white;
+  height: 17px;
+  margin-right: 8px;
+}
+
+.rotate {
+  -webkit-animation: spin 4s linear infinite;
+          animation: spin 4s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

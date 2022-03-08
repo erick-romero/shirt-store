@@ -23,7 +23,15 @@ import {MatCardModule} from '@angular/material/card';
 import { ShirtCardComponent } from './ui/shirt-card/shirt-card.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-
+import { HttpClientModule } from '@angular/common/http';
+import { MenuNavComponent } from './ui/menu-nav/menu-nav.component';
+import { FireAuthService } from './services/fire-auth.service';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { FormsModule } from '@angular/forms';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +40,9 @@ import {MatInputModule} from '@angular/material/input';
     LoginComponent,
     FooterComponent,
     NavbarComponent,
-    ShirtCardComponent
+    ShirtCardComponent,
+    MenuNavComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -41,18 +51,24 @@ import {MatInputModule} from '@angular/material/input';
     MatButtonModule,
     MatIconModule,
     MatToolbarModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore()),
-    provideFunctions(() => getFunctions()),
-    provideStorage(() => getStorage()),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    //provideFirebaseApp(() => initializeApp(environment.firebase)),
+    //provideAuth(() => getAuth()),
+    //provideFirestore(() => getFirestore()),
+    //provideFunctions(() => getFunctions()),
+    //provideStorage(() => getStorage()),
     MatSidenavModule,
     MatListModule,
     MatCardModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [FireAuthService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

@@ -5,16 +5,15 @@
         <div class="formContent">
             <mat-form-field appearance="legacy">
                 <mat-label>Usuario</mat-label>
-                <input matInput placeholder="">
+                <input matInput [(ngModel)]="email" placeholder="">
             </mat-form-field>
             <mat-form-field appearance="legacy">
                 <mat-label>Contraseña</mat-label>
-                <input matInput placeholder="">
+                <input type="password" [(ngModel)]="password" matInput placeholder="">
             </mat-form-field>
-            <button mat-raised-button>
+            <button mat-raised-button (click)="login()">
             Iniciar Sesión
             </button>
-             
         </div>
     </div>
 </div>

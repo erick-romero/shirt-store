@@ -1,5 +1,7 @@
 <div class="footer" #footer>
-   
-
-   <a href="/login"> login </a>
+   <img class='footerItem' src="../../../assets/facebook.png">
+   <img class='footerItem' src="../../../assets/instagram.png">
+   <img class='footerItem' src="../../../assets/twitter.png">
+   <div (click)="showLogin()" class="square"> <a *ngIf="showLoginBtn" href="/login"> login </a> </div>
+   <p> 2022 One life. </p>
 </div>

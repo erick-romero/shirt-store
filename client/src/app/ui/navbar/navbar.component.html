@@ -2,6 +2,19 @@
     <span>One Life</span>
     <span class="spacer"></span>
     <button mat-icon-button class="icon" aria-label="icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
+        <mat-icon (click)="drawer.toggle()" >menu</mat-icon>
     </button>
-  </mat-toolbar>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer  #drawer class="example-sidenav" mode="side">
+      <p class='cross' (click)="drawer.toggle()" style="text-align:start;color: #DCCA87;"> X </p>
+      <ul>
+          <li>Menú</li>
+          <li>Productos</li>
+          <li>Personalización</li>
+          <li>Acerca de nosotros</li>
+          <li>Contacto</li>
+      </ul>
+    </mat-drawer>
+</mat-drawer-container>    
