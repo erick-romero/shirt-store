@@ -3,5 +3,6 @@ lib/
 lib64
 pyvenv.cfg
 venv/
-__pycache__/*
+*pycache__/*
 .env
+shirt-store.json
