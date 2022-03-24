@@ -22,14 +22,24 @@ print(db)
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
+  return {"Hello": "World"}
 
 
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: Optional[str] = None):
-    return {"item_id": item_id, "q": q}
+  return {"item_id": item_id, "q": q}
 
 @app.get("/products/")
 def get_products():
-    products = {"id": "prod1", "name": "Camiseta 1"}
-    return products
+  products = {"id": "prod1", "name": "Camiseta 1"}
+  return products
+
+@app.get("/shirt/new")
+def shirt_new():
+  doc_ref = db.collection(u'shirts').document(u'shirt1')
+  doc_ref.set({
+    u'id': u'1',
+    u'color': u'green'
+  })
+  print(doc_ref)
+
