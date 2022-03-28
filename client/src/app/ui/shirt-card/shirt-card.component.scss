@@ -1,6 +1,5 @@
 .cardContent{
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -10,15 +9,23 @@
 }
 
 .card{
-    
     background-color:rgba(0,0,0,0);
-    
     border: 1px solid #DCCA87;
+    max-width: 200px;
+    padding: 16px;
+    
 }
 
 .card:hover{
     cursor:pointer;
+    background:linear-gradient(rgba(85, 83, 83, 0.6), rgba(85, 83, 83, 0.6))
 }
+
+img{
+    max-height: 232px;
+}
+
+
 
 
 

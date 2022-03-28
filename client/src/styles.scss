@@ -114,8 +114,8 @@ $classy-theme: mat-light-theme($classy-primary, $classy-accent,$classy-warn);
 @include angular-material-theme($classy-theme);
 */ 
 @import '@angular/material/prebuilt-themes/purple-green.css';
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #eaeaea; }
+html, body { height: 100%;overflow-x: hidden;background-color: black; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: black; }
 
 
 

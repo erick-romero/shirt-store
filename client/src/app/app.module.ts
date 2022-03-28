@@ -32,6 +32,14 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { DashboardMenuComponent } from './pages/dashboard/dashboard-menu/dashboard-menu.component';
+import { InventarioComponent } from './pages/dashboard/inventario/inventario.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ModalComponent } from './pages/dashboard/inventario/modal/modal.component';
+import { EditmodalComponent } from './pages/dashboard/inventario/editmodal/editmodal.component';
+import { ProductosComponent } from './pages/productos/productos.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +50,13 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     NavbarComponent,
     ShirtCardComponent,
     MenuNavComponent,
-    DashboardComponent
+    DashboardComponent,
+    DashboardMenuComponent,
+    InventarioComponent,
+    ModalComponent,
+    EditmodalComponent,
+    ProductosComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -66,7 +80,10 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     MatFormFieldModule,
     MatInputModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatTableModule,
+    MatDialogModule,
+    FlexLayoutModule
   ],
   providers: [FireAuthService],
   bootstrap: [AppComponent]

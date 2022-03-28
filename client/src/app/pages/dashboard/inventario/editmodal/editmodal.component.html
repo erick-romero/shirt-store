@@ -1,0 +1,35 @@
+<h1 mat-dialog-title align="center">Editar Camisa</h1>
+<div mat-dialog-content align="center" class="content">
+  <mat-form-field appearance="fill">
+    <mat-label>Nombre</mat-label>
+    <input matInput [(ngModel)]="nombre" >
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Descripción</mat-label>
+    <input matInput [(ngModel)]="descripcion" >
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Inventario small</mat-label>
+    <input matInput [(ngModel)]="small">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Inventario medium</mat-label>
+    <input matInput [(ngModel)]="medium">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Inventario large</mat-label>
+    <input matInput [(ngModel)]="large">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Precio</mat-label>
+    <input matInput [(ngModel)]="precio" >
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>url de imagen</mat-label>
+    <input matInput [(ngModel)]="url" >
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button  (click)='deleteShirt()'style="background-color:red" >Borrar </button>
+  <button mat-button  (click)='updateShirt()' cdkFocusInitial>Editar </button>
+</div>
