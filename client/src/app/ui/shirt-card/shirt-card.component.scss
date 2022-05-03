@@ -9,7 +9,7 @@
 }
 
 .card{
-    background-color:rgba(0,0,0,0);
+    //background-color:rgba(232, 241, 57, 0.4);
     border: 1px solid #DCCA87;
     max-width: 200px;
     padding: 16px;
@@ -18,7 +18,7 @@
 
 .card:hover{
     cursor:pointer;
-    background:linear-gradient(rgba(85, 83, 83, 0.6), rgba(85, 83, 83, 0.6))
+    background:linear-gradient(rgba(220, 202, 135, 0.6), rgba(85, 83, 83, 0.6))
 }
 
 img{

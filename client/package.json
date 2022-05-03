@@ -22,6 +22,8 @@
     "@angular/platform-browser": "~13.0.0",
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
+    "@types/fabric": "^4.5.7",
+    "fabric": "^5.2.1",
     "firebase": "^9.4.0",
     "raw-loader": "^4.0.2",
     "rxfire": "^6.0.0",

@@ -4,11 +4,11 @@
   <div class="heroText">
     <h1 class="heroTitle"> One Life Clothing</h1>
     <div >
-    <button mat-stroked-button id="btn1">Personaliza tu diseño</button>
+    <button mat-stroked-button id="btn1" onclick="location.href='/customize'">Personaliza tu diseño</button>
     </div>
     <br>
     <div>
-    <button mat-stroked-button id="btn2">Compra ahora!</button>
+    <button mat-stroked-button id="btn2" onclick="location.href='/products'">Compra ahora!</button>
     </div>
     
   </div>
@@ -21,7 +21,7 @@
   <br>
   <h1 style="color:#DCCA87;"> Productos destacados</h1>
 
-<app-shirt-card class='card'>
+<app-shirt-card [shirt]='shirt' class='card'>
 
 </app-shirt-card>
 </div>

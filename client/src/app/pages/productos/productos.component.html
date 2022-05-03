@@ -2,6 +2,41 @@
 
 <div class="content" >
     <h1> Explora nuestros productos!</h1>
+    <mat-accordion >
+      <mat-expansion-panel hideToggle style="background-color: rgba(0,0,0,0);">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Agregar Filtros
+          </mat-panel-title>
+          
+        </mat-expansion-panel-header>
+        <mat-chip-list [value]=""   (selectionChange)="filterColor($event)" aria-label="Fish selection">
+          <label> Color:</label>
+          <mat-chip [selected]="state1" (selectionChange)="filterColor($event)" (click)="state1=!state1">Rojo</mat-chip>
+          <mat-chip [selected]="state2" (selectionChange)="filterColor($event)" (click)="state2=!state2">Blanco</mat-chip>
+          <mat-chip [selected]="state3" (selectionChange)="filterColor($event)" (click)="state3=!state3">Amarillo</mat-chip>
+          <mat-chip [selected]="state4" (selectionChange)="filterColor($event)" (click)="state4=!state4">Negro</mat-chip>
+          <mat-chip [selected]="state5" (selectionChange)="filterColor($event)" (click)="state5=!state5">Verde</mat-chip>
+          <mat-chip [selected]="state6" (selectionChange)="filterColor($event)" (click)="state6=!state6">Azul</mat-chip>
+        </mat-chip-list>
+        <br><br>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Desde</mat-label>
+          <input matInput placeholder="$">
+        </mat-form-field>
+        &nbsp;&nbsp;
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Hasta</mat-label>
+          <input matInput placeholder="$">
+        </mat-form-field>
+
+        <button mat-button> filtrar </button>
+
+      </mat-expansion-panel>
+
+     
+      
+    </mat-accordion>
     <div fxLayout="row wrap" fxLayoutGap="16px grid">
       <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let shirt of shirts">
         <app-shirt-card class='card' [shirt]="shirt"></app-shirt-card>

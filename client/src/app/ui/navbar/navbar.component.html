@@ -1,16 +1,19 @@
 <mat-toolbar>
-    <span>One Life</span>
+    <span onclick="location.href='/'" style="cursor:pointer;">One Life</span>
     <span class="spacer"></span>
+    <button onclick="location.href='/cart'" mat-icon-button class="icon" aria-label="icon-button with menu icon">
+        <mat-icon [matBadge]="items" [matBadgeHidden]="hidden" >shopping_cart</mat-icon>
+    </button>
     <button mat-icon-button class="icon" aria-label="icon-button with menu icon">
         <mat-icon (click)="drawer.toggle()" >menu</mat-icon>
     </button>
 </mat-toolbar>
 
-<mat-drawer-container class="example-container" autosize>
+<mat-drawer-container  class="example-container" autosize>
     <mat-drawer  #drawer class="example-sidenav" mode="side">
       <p class='cross' (click)="drawer.toggle()" style="text-align:start;color: #DCCA87;"> X </p>
       <ul>
-          <li><a href="/">Menú</a></li>
+          <li><a href="/">Home</a></li>
           <li ><a href="/products">Productos</a></li>
           <li>Personalización</li>
           <li>Acerca de nosotros</li>

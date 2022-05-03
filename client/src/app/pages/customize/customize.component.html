@@ -1,0 +1,85 @@
+<app-navbar></app-navbar>
+
+<!-- Crea el contenedor de la herramienta -->
+<div class="content">
+<div id="tshirt-div" [ngStyle]="{'background-color':shirtColor}">
+    <!-- 
+        Inicialmente, la imagen tendrá la camiseta de fondo que tiene transparencia.
+        Entonces, simplemente podemos actualizar el color con CSS o JavaScript dinámicamente
+    -->
+    <img id="tshirt-backgroundpicture" src="../../../assets/background_tshirt.png"/>
+
+    <!-- 
+        El contenedor donde funcionará Fabric.js. Note que al estilo de #canvas
+        el ancho y el alto deben coincidir con los atributos
+    -->
+    <div id="drawingArea" class="drawing-area">					
+        <div class="canvas-container">
+            <canvas id="tshirt-canvas" width="200" height="400"></canvas>
+        </div>
+    </div>
+</div>
+<div class="controls">
+
+
+<p style='color:white;'>Para quitar una imagen presionar la tecla <kbd>DEL</kbd> </p>
+<button (click)="Addtext()">Agregar caja de texto</button>
+<br><br>
+<div id="text-controls">
+    <input (change)="textColor($event)" type="color" value="" id="text-color" size="10">
+    <label for="font-family"  style="display:inline-block">&nbsp;&nbsp;Tipografía:</label>
+    <select (change)="textFont($event)" id="font-family">
+      <option value="arial">Arial</option>
+      <option value="helvetica" selected>Helvetica</option>
+      <option value="myriad pro">Myriad Pro</option>
+      <option value="delicious">Delicious</option>
+      <option value="verdana">Verdana</option>
+      <option value="georgia">Georgia</option>
+      <option value="courier">Courier</option>
+      <option value="comic sans ms">Comic Sans MS</option>
+      <option value="impact">Impact</option>
+      <option value="monaco">Monaco</option>
+      <option value="optima">Optima</option>
+      <option value="hoefler text">Hoefler Text</option>
+      <option value="plaster">Plaster</option>
+      <option value="engagement">Engagement</option>
+    </select>
+    <br>
+   
+<!-- El Select que permite al usuario cambiar el color de la camiseta -->
+<br><br>
+<label for="tshirt-color">Color de la camisa:</label>
+<br><br>
+<select id="tshirt-color" (change)="changeShirtColor($event.target)">
+    <!-- Puede agregar cualquier color con una nueva opción y definiendo su código hexadecimal -->
+    <option value="#fff" ngValue="#fff">Blanco</option>
+    <option value="#000">Negro</option>
+    <option value="#f00">Rojo</option>
+    <option value="#008000">Verde</option>
+</select>
+
+<br><br>
+<label for="tshirt-custompicture">Agrega una imagen:</label>
+<br><br>
+<input  (change)="addImg($event.target)" type="file" id="tshirt-custompicture" />
+
+<br><br>
+<label for="tshirt-size">Selecciona tu talla:</label>
+<br><br>
+<select id="tshirt-size">
+    <!-- Puede agregar cualquier color con una nueva opción y definiendo su código hexadecimal -->
+    <option value="#fff">Pequeño</option>
+    <option value="#000">Mediano</option>
+    <option value="#f00">Grande</option>
+</select>
+<br><br><br><br>
+<div>
+<mat-form-field style="width: 100%;" class="example-full-width" appearance="fill">
+    <mat-label>Ingresar correo electronico</mat-label>
+    <input matInput placeholder="example@gmail.com" >
+  </mat-form-field>
+</div>  
+  <br>
+<button mat-raised-button color="primary" (click)="cotizarDisenio()">Cotizar diseño</button>
+</div>
+</div>

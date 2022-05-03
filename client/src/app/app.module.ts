@@ -40,6 +40,12 @@ import { ModalComponent } from './pages/dashboard/inventario/modal/modal.compone
 import { EditmodalComponent } from './pages/dashboard/inventario/editmodal/editmodal.component';
 import { ProductosComponent } from './pages/productos/productos.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { CustomizeComponent } from './pages/customize/customize.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import {MatSelectModule} from '@angular/material/select';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatChipsModule} from '@angular/material/chips';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +62,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     ModalComponent,
     EditmodalComponent,
     ProductosComponent,
+    CustomizeComponent,
+    ProductDetailComponent,
+    
     
   ],
   imports: [
@@ -83,7 +92,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FormsModule,
     MatTableModule,
     MatDialogModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatSelectModule,
+    MatBadgeModule,
+    MatExpansionModule,
+    MatChipsModule
   ],
   providers: [FireAuthService],
   bootstrap: [AppComponent]

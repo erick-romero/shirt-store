@@ -1,0 +1,53 @@
+.drawing-area{
+    position: absolute;
+    top: 60px;
+    left: 122px;
+    z-index: 10;
+    width: 200px;
+    height: 400px;
+}
+
+.canvas-container{
+    width: 200px; 
+    height: 400px; 
+    position: relative; 
+    user-select: none;
+}
+
+#tshirt-div{
+    width: 452px;
+    height: 548px;
+    position: relative;
+    border: 10px solid #DCCA87;;
+}
+
+#canvas{
+    position: absolute;
+    width: 200px;
+    height: 400px; 
+    left: 0px; 
+    top: 0px; 
+    user-select: none; 
+    cursor: default;
+}
+
+.controls{
+    margin-top: 80px;
+    justify-content: center;
+    text-align: center;
+     color: white;
+}
+
+.content{
+    margin-top: 20px;
+    display: flex;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:20px;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.example-full-width{
+    font-size: 12px;
+}
+
