@@ -11,7 +11,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.carrS.carritoItems$.subscribe((el)=>{
       
-      this.items = el.length
+      this.items = el.length/2
       console.log(this.items)
       if(this.items> 0){
         console.log(this.items)

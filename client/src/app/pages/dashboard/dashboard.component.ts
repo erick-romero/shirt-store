@@ -7,7 +7,9 @@ import { ModalComponent } from './inventario/modal/modal.component';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
+inv:any = "inv"
+ventas:any = "ventas"
+state:any = "inv"
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -22,5 +24,9 @@ export class DashboardComponent implements OnInit {
       console.log('The dialog was closed');
       
     });
+  }
+
+  setState(state:any){
+    this.state = state
   }
 }

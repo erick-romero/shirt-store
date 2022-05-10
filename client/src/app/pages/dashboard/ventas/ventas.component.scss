@@ -1,0 +1,31 @@
+table{
+    width: 80%;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    margin-top: 50px;
+    flex-direction: column;
+}
+h1{
+    text-align: center;
+    margin-top: 20px;
+    color: #DCCA87;
+}
+
+.mat-row:hover {
+    background-color: rgb(110, 110, 107);
+  }
+
+  .buttons{
+      display: flex;
+      width: 80%;
+  }
+
+  button{
+      background-color: #DCCA87;
+      margin-bottom: 15px;
+  }

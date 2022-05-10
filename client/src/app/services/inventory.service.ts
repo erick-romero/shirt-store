@@ -25,4 +25,8 @@ export class InventoryService {
   deleteShirt(shirt:any){
     this.afs.doc<any>('shirts/'+shirt.id).delete()
   }
+
+  addBuy(obj:any){
+    
+  }
 }

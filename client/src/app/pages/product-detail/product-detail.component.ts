@@ -10,6 +10,7 @@ import { CarritoService } from 'src/app/services/carrito.service';
   styleUrls: ['./product-detail.component.scss']
 })
 export class ProductDetailComponent implements OnInit {
+  selectedValue:any
   id:any
   shirt:any
   constructor(private route: ActivatedRoute, private invS: InventoryService,private carrS:CarritoService) { }
@@ -33,6 +34,10 @@ export class ProductDetailComponent implements OnInit {
   }
 
   addToCart(){
-    this.carrS.addItem(this.shirt.id)
+    console.log(this.selectedValue)
+    this.carrS.addItem(this.shirt.id,this.selectedValue)
+  }
+  changeSize(ev:any){
+    console.log(ev)
   }
 }

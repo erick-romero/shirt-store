@@ -46,6 +46,12 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatChipsModule} from '@angular/material/chips';
+import { CartCardComponent } from './ui/cart-card/cart-card.component';
+import { ModalComponent3 } from './pages/cart/modal/modal.component';
+import {MatStepperModule} from '@angular/material/stepper';
+import { ReactiveFormsModule } from '@angular/forms';
+import { VentasComponent } from './pages/dashboard/ventas/ventas.component';
+import { ModalComponent2 } from './pages/dashboard/ventas/modal/modal.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,6 +70,10 @@ import {MatChipsModule} from '@angular/material/chips';
     ProductosComponent,
     CustomizeComponent,
     ProductDetailComponent,
+    CartCardComponent,
+    ModalComponent3,
+    VentasComponent,
+    ModalComponent2
     
     
   ],
@@ -96,7 +106,9 @@ import {MatChipsModule} from '@angular/material/chips';
     MatSelectModule,
     MatBadgeModule,
     MatExpansionModule,
-    MatChipsModule
+    MatChipsModule,
+    MatStepperModule,
+    ReactiveFormsModule
   ],
   providers: [FireAuthService],
   bootstrap: [AppComponent]

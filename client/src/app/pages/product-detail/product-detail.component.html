@@ -16,7 +16,7 @@
      <div class="ct2" style="margin-top: 100px;">  
         <mat-form-field appearance="fill">
           <mat-label>Selecciona tu talla</mat-label>
-          <mat-select value="S" >
+          <mat-select value="S" [(ngModel)]="selectedValue">
             <mat-option *ngFor="let food of foods" [value]="food.value">
               {{food.viewValue}}
             </mat-option>

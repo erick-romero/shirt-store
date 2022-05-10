@@ -1,11 +1,12 @@
 <mat-drawer-container class="container">
     <mat-drawer class="sidenav" mode="side" opened>
         <ul>
-            <li>Inventario</li>
-            <li>Ventas</li>
+            <li (click)="setState(inv)">Inventario</li>
+            <li (click)="setState(ventas)"> Ventas</li>
         </ul>
     </mat-drawer>
     <mat-drawer-content class="content">
-        <app-inventario> </app-inventario>
+        <app-inventario *ngIf="state=='inv'"> </app-inventario>
+        <app-ventas *ngIf="state=='ventas'"> </app-ventas>
     </mat-drawer-content>
 </mat-drawer-container>

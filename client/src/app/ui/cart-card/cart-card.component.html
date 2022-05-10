@@ -1,0 +1,51 @@
+<div class="container">
+<mat-card>
+    <!--
+    <mat-card-title>{{item.item.nombre}}</mat-card-title>
+    <mat-card-subtitle>
+        
+        <br>
+        <mat-form-field appearance="outline">
+          <mat-label>Cantidad:</mat-label>
+          <input matInput value="1">
+        </mat-form-field>
+        
+    </mat-card-subtitle>
+    -->
+        <div class="inside">
+            <img mat-card-lg-image [src]="item.item.url">
+            <div class="text">
+                <h2>{{item.item.nombre}}</h2>
+                <p>$ {{item.item.precio}}</p>
+                <p>{{item.item.descripcion}}</p>
+                <mat-form-field appearance="fill">
+                    <mat-label>cantidad</mat-label>
+                    <select matNativeControl (change)="changePrice($event)" value="1"> 
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </mat-form-field>
+                  &nbsp;  &nbsp; 
+                  <mat-form-field appearance="fill">
+                    <mat-label>Talla</mat-label>
+                    <select matNativeControl [value]="item.size"> 
+                      <option value="S">Pequeño</option>
+                      <option value="M">Mediano</option>
+                      <option value="L">Grande</option>
+                    </select>
+                  </mat-form-field>
+<br>
+                  <button mat-raised-button (click)="elimItem()" color="warn">Eliminar</button>
+            </div>
+        </div>
+        <!--
+    <mat-card-actions align="end">
+      <button mat-button>Like</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+    -->
+  </mat-card>
+</div>
